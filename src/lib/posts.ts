@@ -5,7 +5,7 @@ import sanitizeHtml from "sanitize-html";
 
 const converter = new showdown.Converter();
 
-const postDir = "posts";
+const postDir = "static/posts";
 
 export function getAllPosts() {
     let posts = []
