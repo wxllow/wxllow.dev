@@ -7,6 +7,8 @@ const converter = new showdown.Converter();
 
 const postDir = "posts";
 
+console.error(process.cwd());
+
 export function getAllPosts() {
     let posts = []
 
