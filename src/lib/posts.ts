@@ -3,7 +3,6 @@ import path from 'path';
 import matter from "gray-matter";
 import showdown from 'showdown';
 import sanitizeHtml from "sanitize-html";
-
 const converter = new showdown.Converter();
 
 let postDir = "./static/posts"

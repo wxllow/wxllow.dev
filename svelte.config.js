@@ -1,14 +1,13 @@
-import adapter from "@sveltejs/adapter-auto";
+import adapter from "@sveltejs/adapter-node";
 import preprocess from "svelte-preprocess";
 
 const config = {
     kit: {
-        adapter: adapter(),
+        adapter: adapter({
+            out: "build",
+        }),
     },
 
-    prerender: {
-        enabled: true,
-    },
     // Consult https://github.com/sveltejs/svelte-preprocess
     // for more information about preprocessors
     preprocess: [
