@@ -1,5 +1,4 @@
 import { readdirSync, readFileSync, existsSync } from 'fs';
-import path from 'path';
 import matter from "gray-matter";
 import showdown from 'showdown';
 import sanitizeHtml from "sanitize-html";

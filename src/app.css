@@ -8,7 +8,7 @@
         @apply bg-gray-100 text-black dark:text-white;
     }
 
-    .dark > body {
+    .dark body {
         background-color: #212121;
     }
 
@@ -22,8 +22,8 @@
     main * {
         @apply mx-auto;
         font-size: 1.15rem;
-        margin-top: 0.69rem;
-        margin-bottom: 0.69rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
     }
 
     main a {
@@ -34,6 +34,25 @@
     iframe {
         @apply mx-auto my-4;
         max-width: 100%;
+    }
+
+    post a {
+        @apply text-sky-400;
+    }
+
+    post h1 {
+        @apply text-4xl font-bold;
+    }
+
+    post h2 {
+        @apply text-3xl font-bold;
+    }
+
+    post h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-2xl font-bold;
     }
 }
 
