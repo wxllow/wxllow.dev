@@ -8,7 +8,9 @@ const converter = new showdown.Converter();
 
 const postDir = path.join(process.cwd(), "posts");
 
-console.error(readdirSync(process.cwd()));
+readdirSync(process.cwd()).forEach(file => {
+    console.error("File in CWD: ", file);
+})
 
 export function getAllPosts() {
     let posts = []
