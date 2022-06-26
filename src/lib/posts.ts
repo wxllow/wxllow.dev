@@ -6,11 +6,7 @@ import sanitizeHtml from "sanitize-html";
 
 const converter = new showdown.Converter();
 
-let postDir = path.join(process.cwd(), "posts");
-
-if (!existsSync(postDir)) {
-    postDir = path.join(process.cwd(), "static/posts");
-}
+let postDir = "./static/posts"
 
 export function getAllPosts() {
     let posts = []
