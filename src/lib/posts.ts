@@ -8,6 +8,8 @@ const converter = new showdown.Converter();
 
 const postDir = path.join(process.cwd(), "posts");
 
+console.error(readdirSync(process.cwd()));
+
 export function getAllPosts() {
     let posts = []
 
