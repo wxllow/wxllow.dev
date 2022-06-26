@@ -1,6 +1,13 @@
+
 <script>
     export let post;
 </script>
+
+<svelte:head>
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+    <title>{post.metadata.title}</title>
+</svelte:head>
 
 <h1 class="title text-5xl">{post.metadata.title}</h1>
 <p class="info text-gray-700 dark:text-gray-300">Published {post.metadata.date}</p>
@@ -12,3 +19,5 @@
     {/if}
     {@html post.content}
 </post>
+
+

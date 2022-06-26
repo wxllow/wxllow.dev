@@ -35,9 +35,19 @@ export function getPost(slug: string) {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(readFileSync(`${postDir}/${slug}.md`, 'utf8'));
-
+    
     // Convert markdown into HTML string
+    const allowedAttributes = sanitizeHtml.defaults.allowedAttributes;
+
+    if (!allowedAttributes.code) {
+        allowedAttributes.code = [];
+    }
+
+    allowedAttributes.code.push("class");
+
+
     const contentHtml = sanitizeHtml(converter.makeHtml(matterResult.content), {
+        allowedAttributes: allowedAttributes,
         disallowedTagsMode: "escape",
     });
 

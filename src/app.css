@@ -35,7 +35,9 @@
         @apply mx-auto my-4;
         max-width: 100%;
     }
+}
 
+@layer components {
     post a {
         @apply text-sky-400;
     }
@@ -54,9 +56,6 @@
     h6 {
         @apply text-2xl font-bold;
     }
-}
-
-@layer components {
 }
 
 html {
