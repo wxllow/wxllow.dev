@@ -1,0 +1,18 @@
+# Generic
+*.lock
+logs
+*.log
+node_modules/
+
+# macOS things
+.DS_Store
+
+# Svelte
+/build
+/.svelte-kit
+/package
+
+# dotenv environment variable files
+.env
+.env.*
+!.env.example

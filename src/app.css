@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        /* Light and dark mode */
+        @apply bg-gray-100 text-black dark:text-white;
+    }
+
+    .dark > body {
+        background-color: #212121;
+    }
+
+    main {
+        @apply grid;
+        @apply justify-center text-center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    main * {
+        @apply mx-auto;
+        font-size: 1.15rem;
+        margin-top: 0.69rem;
+        margin-bottom: 0.69rem;
+    }
+
+    main a {
+        @apply hover:brightness-90;
+    }
+
+    main img,
+    iframe {
+        @apply mx-auto my-4;
+        max-width: 100%;
+    }
+}
+
+@layer components {
+}
+
+html {
+    font-family: BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L",
+        Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
+}
+
+/* Title with lines on the side */
+.sidelines {
+    display: flex;
+    min-width: 100%;
+    width: 45vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sidelines:before,
+.sidelines:after {
+    content: "";
+    border-top: 2px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+.sidelines:after {
+    margin: 0 0 0 20px;
+}
