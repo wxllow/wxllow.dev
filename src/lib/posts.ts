@@ -1,17 +1,18 @@
 import { readdirSync, readFileSync, existsSync } from 'fs';
+import path from 'path';
 import matter from "gray-matter";
 import showdown from 'showdown';
 import sanitizeHtml from "sanitize-html";
 
 const converter = new showdown.Converter();
 
-const postDir = "posts";
+const postDir = path.join(process.cwd(), "posts");
 
 export function getAllPosts() {
     let posts = []
 
     readdirSync(postDir).forEach(file => {
-        const post = process(file.replace(".md", ""));
+        const post = getPost(file.replace(".md", ""));
 
         posts.push(post);
     })
@@ -28,7 +29,7 @@ export function getAllPosts() {
 }
 
 
-export function process(slug: string) {
+export function getPost(slug: string) {
     
     if (!existsSync(`${postDir}/${slug}.md`)) {
         return null;
