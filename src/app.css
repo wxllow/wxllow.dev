@@ -35,6 +35,16 @@
         @apply mx-auto my-4;
         max-width: 100%;
     }
+
+    post {
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr min(57rem, 90%) 1fr;
+    }
+
+    post > * {
+        grid-column: 2;
+    }
 }
 
 @layer components {
