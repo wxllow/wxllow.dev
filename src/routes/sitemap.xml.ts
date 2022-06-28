@@ -10,7 +10,7 @@ export function get() {
         },
         body: `<?xml version="1.0" encoding="UTF-8" ?>
         <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-            <!-- Get page URLs from header JSON file -->
+            <!-- Page URLs -->
             ${header.map(page => {
                 return `
                 <url>
@@ -18,13 +18,13 @@ export function get() {
                     <changefreq>weekly</changefreq>
                     <priority>0.8</priority>
                 </url>`}).join('')}
-            <!-- Get post URLs -->
+            <!-- Post URLs -->
             ${getAllPosts().map(post => {
                 return `<url>
                     <loc>${website}/posts/${post.slug}</loc>
                     <changefreq>weekly</changefreq>
                     <priority>0.8</priority>
-                    <lastmod>${post.date}</lastmod>
+                    <lastmod>${post.metadata.date || ""}</lastmod>
                 </url>`}).join('')}
         </urlset>`,
     }
