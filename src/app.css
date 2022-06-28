@@ -13,21 +13,12 @@
     }
 
     main {
-        @apply grid;
-        @apply justify-center text-center;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        @apply grid justify-center text-center mx-4;
     }
 
     main * {
-        @apply mx-auto;
+        @apply mx-auto my-3;
         font-size: 1.15rem;
-        margin-top: 0.75rem;
-        margin-bottom: 0.75rem;
-    }
-
-    main a {
-        @apply hover:brightness-90;
     }
 
     main img,
@@ -37,8 +28,7 @@
     }
 
     post {
-        text-align: left;
-        display: grid;
+        @apply text-left grid;
         grid-template-columns: 1fr min(57rem, 90%) 1fr;
     }
 
@@ -48,6 +38,10 @@
 }
 
 @layer components {
+    main a {
+        @apply hover:brightness-90;
+    }
+
     post a {
         @apply text-sky-400;
     }
