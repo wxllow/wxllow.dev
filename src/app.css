@@ -54,11 +54,16 @@
         @apply text-3xl font-bold;
     }
 
-    post h3,
+    post (h3,
     h4,
     h5,
-    h6 {
+    h6) {
         @apply text-2xl font-bold;
+    }
+
+    .sus main *::before,
+    .sus main *::after {
+        content: "ඞ ";
     }
 }
 
