@@ -2,7 +2,7 @@
     export const load = async ({ props }) => {
     	return {
     	    props,
-    	    stuff: { metadata: { "title": props.post.metadata.title, "description": props.post.metadata.description} }
+    	    stuff: { metadata: { "title": props.post.metadata.title, "description": props.post.metadata.description, "type": "article"} }
     	}
     }
 </script>
