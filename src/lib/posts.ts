@@ -7,6 +7,7 @@ const converter = new showdown.Converter();
 let postDir = "./static/posts"
 
 export function getAllPosts() {
+    /*  Get and sort all posts */
     let posts = []
 
     readdirSync(postDir).forEach(file => {
@@ -28,7 +29,7 @@ export function getAllPosts() {
 
 
 export function getPost(slug: string) {
-    
+    /* Get post by slug */
     if (!existsSync(`${postDir}/${slug}.md`)) {
         return null;
     }

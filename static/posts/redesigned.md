@@ -2,7 +2,7 @@
 title: 'Redesign 🪄'
 date: '2022-06-25'
 description: "Welcome to my redesigned/remade website!"
-categories: ["svelte", "sveltekit", "javascript", "typescript", "web"]
+tags: ["svelte", "sveltekit", "javascript", "typescript", "web"]
 ---
 
 wxllow.dev has, for the third time, been redesigned/remade :)
