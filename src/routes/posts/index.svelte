@@ -1,3 +1,11 @@
+<script context="module">
+    export const load = async ({ props }) => {
+    	return {
+    	    props,
+    	    stuff: { metadata: { "title": "Posts", "description": "Posts by wxllow"} }
+    	}
+    }
+</script>
 <script>
     export let posts;
 </script>
