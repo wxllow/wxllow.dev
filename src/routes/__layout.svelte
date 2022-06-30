@@ -13,8 +13,8 @@
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={metadata.description}/>
-    <meta name="og:title" content={title}>
-    <meta name="og:description" content={metadata.description}/>
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={metadata.description}/>
     <meta name="theme-color" content="#F4B7C1"/>
 </svelte:head>
 

@@ -7,16 +7,16 @@
     <title>{`${post.metadata.title} - wxllow.dev`}</title>
     <meta name="title" content={`${post.metadata.title} - wxllow.dev`} />
     <meta name="description" content={post.metadata.description}/>
-    <meta name="og:title" content={`${post.metadata.title} - wxllow.dev`}>
-    <meta name="og:description" content={post.metadata.description}/>
-    <meta name="og:type" content="article" />
-    <meta name="og:article:published_time" content={post.metadata.date} />
+    <meta property="og:title" content={`${post.metadata.title} - wxllow.dev`}>
+    <meta property="og:description" content={post.metadata.description}/>
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content={post.metadata.date} />
 
     <!-- Post tags -->
     {#if post.metadata.tags}
         {#each post.metadata.tags as tag}
             <meta name="keywords" content={tag} />
-            <meta name="og:article:tag" content={tag} />
+            <meta property="og:article:tag" content={tag} />
         {/each}
     {/if}
     
