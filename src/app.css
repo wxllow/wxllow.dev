@@ -54,16 +54,11 @@
         @apply text-3xl font-bold;
     }
 
-    post (h3,
-    h4,
-    h5,
-    h6) {
+    post h3,
+    post h4,
+    post h5,
+    post h6 {
         @apply text-2xl font-bold;
-    }
-
-    .sus main *::before,
-    .sus main *::after {
-        content: "ඞ ";
     }
 }
 
@@ -92,4 +87,18 @@ html {
 
 .sidelines:after {
     margin: 0 0 0 20px;
+}
+
+/* Among US mode */
+.sus * {
+    background: url("https://static3.srcdn.com/wordpress/wp-content/uploads/2020/10/Among-Us-Desktop-Wallpaper-Backgrounds-Crewmates-Adrift.jpg?q=50&fit=crop&w=740&h=370");
+}
+
+.sus img {
+    content: url("https://static3.srcdn.com/wordpress/wp-content/uploads/2020/10/Among-Us-Desktop-Wallpaper-Backgrounds-Crewmates-Adrift.jpg?q=50&fit=crop&w=740&h=370");
+}
+
+.sus main *::before,
+.sus main *::after {
+    content: "ඞ ";
 }
