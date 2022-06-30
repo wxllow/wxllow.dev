@@ -4,7 +4,7 @@
     const pages: any = header;
 </script>
 
-<nav class="border-gray-200 px-2 sm:px-6 py-4 rounded-lg bg-pink-400">
+<nav class="border-gray-200 px-2 sm:px-6 py-4 bg-pink-400">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
         <a href="/" class="flex items-center font-semibold text-xl">
             wxllow.dev
