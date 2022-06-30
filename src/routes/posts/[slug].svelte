@@ -4,6 +4,22 @@
 <svelte:head>
     <link href="/prism.css" rel="stylesheet" />
     <script src="/prism.js"></script>
+    <title>{`${post.metadata.title} - wxllow.dev`}</title>
+    <meta name="title" content={`${post.metadata.title} - wxllow.dev`} />
+    <meta name="description" content={post.metadata.description}/>
+    <meta name="og:title" content={`${post.metadata.title} - wxllow.dev`}>
+    <meta name="og:description" content={post.metadata.description}/>
+    <meta name="og:type" content="article" />
+    <meta name="og:article:published_time" content={post.metadata.date} />
+
+    <!-- Post tags -->
+    {#if post.metadata.tags}
+        {#each post.metadata.tags as tag}
+            <meta name="keywords" content={tag} />
+            <meta name="og:article:tag" content={tag} />
+        {/each}
+    {/if}
+    
 </svelte:head>
 
 
