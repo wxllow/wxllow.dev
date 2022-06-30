@@ -1,12 +1,9 @@
-
 <script>
     export let post;
 </script>
-
 <svelte:head>
     <link href="/prism.css" rel="stylesheet" />
     <script src="/prism.js"></script>
-    <title>{post.metadata.title}</title>
 </svelte:head>
 
 
