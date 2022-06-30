@@ -24,7 +24,7 @@
 
     {#if (!metadata.type)}
         <meta property="og:type" content="website">
-{   /if}
+    {/if}
 
     <!-- Twitter -->
     <meta name="twitter:title" content={title}>
