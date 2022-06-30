@@ -26,6 +26,11 @@
         <meta property="og:type" content="website">
     {/if}
 
+    <!-- Tags -->
+    {#each ["code", "dev", "developer", "portfolio", "coding", "programming"] as tag}
+        <meta name="keywords" content={tag} />
+    {/each}
+
     <!-- Twitter -->
     <meta name="twitter:title" content={title}>
     <meta name="twitter:description" content={metadata.description}>
