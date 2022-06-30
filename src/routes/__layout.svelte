@@ -46,4 +46,9 @@
 <!-- Scripts -->
 <div>
     <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js" defer></script>
+    <script>
+        if (new URLSearchParams(window.location.search).get("sus") != null) {
+            document.documentElement.classList.add("sus");
+        }
+    </script>
 </div>
