@@ -3,7 +3,7 @@ import header from "../components/header";
 
 const website = "https://wxllow.dev" // The URL of the website
 
-export function get() {
+export function GET() {
     return {
         headers: {
             'Content-Type': 'application/xml', 

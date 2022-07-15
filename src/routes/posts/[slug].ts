@@ -1,6 +1,6 @@
 import { getPost } from '$lib/posts';
 
-export function get({ params }) {
+export function GET({ params }) {
     const { slug } = params;
 
     const post = getPost(slug);

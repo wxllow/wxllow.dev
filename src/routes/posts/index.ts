@@ -1,6 +1,6 @@
 import { getAllPosts } from '$lib/posts';
 
-export function get() {
+export function GET() {
     const posts = getAllPosts();
 
     return {
