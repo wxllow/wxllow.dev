@@ -12,10 +12,6 @@ export default [
         "url": "/posts"
     },
     {
-        "name": "Socials",
-        "url": "/socials"
-    },
-    {
         "name": "About Me",
         "url": "/about"
     }
