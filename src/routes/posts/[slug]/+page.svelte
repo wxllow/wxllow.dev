@@ -1,6 +1,6 @@
 <script>
     export let data;
-    let { post } = data.props;
+    let post = data;
 </script>
 <svelte:head>
     <meta property="og:type" content="article" />
@@ -26,7 +26,7 @@
     {#if post.metadata.video }
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{post.metadata.video}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
     {/if}
-    {@html post.content}
+    <svelte:component this={post.content} />
 </post>
 
 

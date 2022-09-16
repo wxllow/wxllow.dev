@@ -1,6 +1,8 @@
-export const load = (data) => {
+export const load = async ({ fetch }) => {
+    const response = await fetch(`/api/posts`)
+    const posts = await response.json()
+  
     return {
-        posts: data.data.posts,
-        metadata: { title: "Posts", description: "Posts by wxllow" },
-    };
-};
+        posts
+    }
+}

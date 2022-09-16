@@ -1,6 +1,8 @@
-export const load = async ({ data: props }) => {
-	return {
-	    props,
-	    metadata: { "title": props.post.metadata.title, "description": props.post.metadata.description, "type": "article"}
-	}
+export async function load({ params }){
+    const post = await import(`../${params.slug}.md`)
+  
+    return {
+        metadata: post.metadata,
+        content: post.default,
+    }
 }
