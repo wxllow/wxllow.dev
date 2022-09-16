@@ -1,9 +1,9 @@
-import { getAllPosts } from "$lib/posts"
+import { fetchMarkdownPosts } from "$lib/posts";
 import header from "../../components/header";
 
 const website = "https://wxllow.dev" // The URL of the website
 
-export function GET() {
+export async function GET() {
     return new Response(`<?xml version="1.0" encoding="UTF-8" ?>
         <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
             <!-- Page URLs -->
@@ -15,9 +15,9 @@ export function GET() {
                     <priority>0.8</priority>
                 </url>`}).join('')}
             <!-- Post URLs -->
-            ${getAllPosts().map(post => {
+            ${(await fetchMarkdownPosts()).map(post => {
                 return `<url>
-                    <loc>${website}/posts/${post.slug}</loc>
+                    <loc>${website}${post.path}</loc>
                     <changefreq>weekly</changefreq>
                     <priority>0.8</priority>
                     <lastmod>${post.metadata.date || ""}</lastmod>
