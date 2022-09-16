@@ -1,10 +1,3 @@
-<script context="module">
-    export const load = async () => {
-    return {
-        stuff: { metadata: { "title": "Projects", "description": "My projects!"} }
-    }
-}
-</script>
 <h1 class="text-5xl font-bold sidelines">Projects</h1>
 <div>
     <div class="max-w-sm rounded-lg border bg-gray-100 dark:bg-gray-800 border-white dark:border-gray-700 shadow-lg ">

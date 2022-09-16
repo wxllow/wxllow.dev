@@ -1,13 +1,6 @@
-<script context="module">
-    export const load = async ({ props }) => {
-    	return {
-    	    props,
-    	    stuff: { metadata: { "title": "Posts", "description": "Posts by wxllow"} }
-    	}
-    }
-</script>
 <script>
-    export let posts;
+    export let data;
+    let { posts } = data;
 </script>
 <h1 class="text-5xl font-bold sidelines">Posts</h1>
 

@@ -1,13 +1,6 @@
-<script context="module">
-    export const load = async ({ props }) => {
-    	return {
-    	    props,
-    	    stuff: { metadata: { "title": props.post.metadata.title, "description": props.post.metadata.description, "type": "article"} }
-    	}
-    }
-</script>
 <script>
-    export let post;
+    export let data;
+    let { post } = data.props;
 </script>
 <svelte:head>
     <meta property="og:type" content="article" />

@@ -7,9 +7,9 @@
 
     import {page} from "$app/stores";
 
-    export let metadata = ($page.stuff as any).metadata || {"title": "", "description": "Teenage girl with an interest for programming, Linux, & security."};
-    export let title = metadata.title ? `${metadata.title} - wxllow.dev` : "wxllow.dev";
-    export let path = $page.url.pathname;
+    $: metadata = $page.data.metadata || {"title": "", "description": "Teenage girl with an interest for programming, Linux, & security."};
+    $: title = metadata.title ? `${metadata.title} - wxllow.dev` : "wxllow.dev";
+    $: path = $page.url.pathname;
 </script>
 
 <svelte:head>
