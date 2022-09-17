@@ -19,4 +19,5 @@ interface PostMetadata {
 	description?: string;
 	date: string;
 	tags: string[];
+	video?: string;
 }
