@@ -47,33 +47,6 @@
     {/each}
 </ul>
 
-<h2 class="text-4xl font-bold">Favorite Games <span class="italic font-normal">(Not in order)</span></h2>
-<ul>
-    <li>Minecraft</li>
-    <li>Grand Theft Auto Series (Top Picks: SA, IV, V)</li>
-    <li>Far Cry 6</li>
-    <li>Life is Strange Series</li>
-    <li>Tomb Raider Series</li>
-    <li>BeamNG.drive</li>
-    <li>Truck Simulator Series (SCS Software)</li>
-    <li>Borderlands 2</li>
-    <li>Borderlands 3</li>
-    <li>Portal</li>
-    <li>Half Life Series</li>
-    <li>Gmod</li>
-    <li>Team Fortress II</li>
-</ul>
-
-<h2 class="text-4xl font-bold">Favorite Animes <span class="italic font-normal">(Not in order)</span></h2>
-<ul>
-    <li>Kakegurui</li>
-    <li>Seven Deadly Sins</li>
-    <li>Hunter x Hunter</li>
-    <li>Banana Fish</li>
-    <li>Sailor Moon</li>
-    <li>.hack//SIGN</li>
-</ul>
-
 <h2 class="text-4xl font-bold">Software Recommendations (Cross-platform)</h2>
 <ul>
     <li>mpv - Lightweight media player</li>
@@ -106,6 +79,6 @@
     <li>Artix Linux - For experienced Linux users: Arch sans systemd; also has some nice installers with DE included</li>
     <li>EndeavourOS - Arch for "beginners"; still will require basic terminal knowledge</li>
     <li>Linux Mint - Amazing beginners distro; easy to use, based on Ubuntu, includes important applications</li>
-    <li>AmogOS - Best Distro Ever (Don't actually use this)</li>
-    <li>Hannah Montana Linux - Revolutionary Distro (Don't actually use this)</li>
+    <li>AmogOS</li>
+    <li>Hannah Montana Linux</li>
 </ul>

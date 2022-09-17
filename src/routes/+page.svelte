@@ -19,7 +19,4 @@
     <li>
         <a class="text-sky-400" href="https://munchi.wxllow.dev">munchi.wxllow.dev - A Discord Bot</a>
     </li>
-    <li>
-        <a class="text-sky-400" href="https://backend.munchi.wxllow.dev">backend.munchi.wxllow.dev - Munchi Backend :p</a>
-    </li>
 </ul> 

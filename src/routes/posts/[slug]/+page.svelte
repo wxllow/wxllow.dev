@@ -19,7 +19,7 @@
 
 
 
-<post class="px-20">
+<post>
     <h1 class="title text-5xl">{post.metadata.title}</h1>
     <p class="info text-gray-700 dark:text-gray-300">Published {post.metadata.date}</p>
     <div class="w-full border-b border-black dark:border-white "></div>
