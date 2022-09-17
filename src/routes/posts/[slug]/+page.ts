@@ -1,4 +1,6 @@
-export async function load({ params }){
+import type { PageLoad } from './$types';
+
+export const load:PageLoad = async ({ params }) => {
     const post = await import(`../${params.slug}.md`)
   
     return {

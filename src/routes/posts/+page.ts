@@ -1,4 +1,6 @@
-export const load = async ({ fetch }) => {
+import type { PageLoad } from './$types';
+
+export const load:PageLoad = async ({ fetch }): Promise<{posts: { metadata: PostMetadata }[]}> => {
     const response = await fetch(`/api/posts`)
     const posts = await response.json()
   

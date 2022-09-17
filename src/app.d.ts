@@ -6,4 +6,17 @@ declare namespace App {
 	interface PageData {}
   
 	interface Platform {}
-  }
+}
+
+
+interface Post {
+	metadata: PostMetadata;
+	content: string;
+}
+
+interface PostMetadata {
+	title: string;
+	description?: string;
+	date: string;
+	tags: string[];
+}
