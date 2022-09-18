@@ -22,7 +22,6 @@
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"flowbite": "^1.5.3",
 		"gray-matter": "^4.0.3",
 		"mdsvex": "^0.10.6",
 		"postcss": "^8.4.14",
@@ -39,5 +38,7 @@
 		"vite": "^3.1.0"
 	},
 	"type": "module",
-	"dependencies": {}
+	"dependencies": {
+		"flowbite": "^1.5.3"
+	}
 }
