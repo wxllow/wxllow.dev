@@ -2,6 +2,7 @@
     import {website} from "$lib/utils";
     
     import "../app.css";
+    import "flowbite/dist/flowbite.css";
     import Header from "../components/header.svelte"
     import Footer from "../components/footer.svelte";
 
@@ -50,7 +51,6 @@
 <footer><Footer/></footer>
 <!-- Scripts -->
 <div>
-    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js" defer></script>
     <script>
         if (new URLSearchParams(window.location.search).get("sus") != null) {
             document.documentElement.classList.add("sus");

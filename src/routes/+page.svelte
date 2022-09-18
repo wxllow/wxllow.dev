@@ -1,13 +1,14 @@
 <h1 class="text-5xl font-bold sidelines">wxllow.dev</h1>
 <p>Hey there, welcome to my little website on the internet!</p>
-<p>My name is Willow, I am 15 years old and a gamer, programmer, a big music nerd, anime watcher, <wbr>and sometimes enjoy other things like drawing and reading!</p>
-<p>I am also (trying to) get into music production.</p>
+<p>My name is Willow, I am a teenage girl living in the United States and I am a gamer, programmer, a big music nerd, anime watcher, <wbr>VOCALOID lover, and sometimes enjoy other things like drawing and reading!</p>
+<p>I am also (trying to) get into music production and making songs. :)</p>
 <a href="/about" class="text-2xl font-bold text-sky-400">Check out my About Me for more info!</a>
 <div class="text-center">
     <a href="https://github.com/wxllow">
         <img alt="GitHub Statistics" src="/github-metrics.svg" />
     </a>
 </div>
+
 <h2 class="text-3xl">Subdomains</h2>
 <ul>
     <li>
