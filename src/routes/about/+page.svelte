@@ -47,6 +47,27 @@
     {/each}
 </ul>
 
+<h2 class="text-4xl font-bold">Favorite Artists (Not in order)</h2>
+<ul>
+    <li>Brent Faiyaz</li>
+    <li>Clairo</li>
+    <li>Cuco</li>
+    <li>Deftones</li>
+    <li>Earl Sweatshirt</li>
+    <li>Frank Ocean</li>
+    <li>Gorillaz</li>
+    <li>Kali Uchis</li>
+    <li>Kanye West</li>
+    <li>MF DOOM</li>
+    <li>Mac Demarco</li>
+    <li>Mac Miller</li>
+    <li>Mitski</li>
+    <li>Nirvana</li>
+    <li>The Beatles</li>
+    <li>The Weeknd</li>
+    <li>Tyler, The Creator</li>
+</ul>
+
 <h2 class="text-4xl font-bold">Software Recommendations (Cross-platform)</h2>
 <ul>
     <li>mpv - Lightweight media player</li>
