@@ -1,23 +1,2 @@
-<h1 class="text-5xl font-bold sidelines">wxllow.dev</h1>
-<p>Hey there, welcome to my little website on the internet!</p>
-<p>My name is Willow, I am a teenage girl living in the United States and I am a gamer, programmer, a big music nerd, anime watcher, <wbr>VOCALOID lover, and sometimes enjoy other things like drawing and reading!</p>
-<p>I am also (trying to) get into music production and making songs. :)</p>
-<a href="/about" class="text-2xl font-bold text-sky-400">Check out my About Me for more info!</a>
-<div class="text-center">
-    <a href="https://github.com/wxllow">
-        <img alt="GitHub Statistics" src="/github-metrics.svg" />
-    </a>
-</div>
-
-<h2 class="text-3xl">Subdomains</h2>
-<ul>
-    <li>
-        <a class="text-sky-400" href="https://git.wxllow.dev">git.wxllow.dev - Git (Gitea Instance)</a>
-    </li>
-    <li>
-        <a class="text-sky-400" href="https://uptime.wxllow.dev">uptime.wxllow.dev - Uptime Kuma Instance</a>
-    </li>
-    <li>
-        <a class="text-sky-400" href="https://munchi.wxllow.dev">munchi.wxllow.dev - A Discord Bot</a>
-    </li>
-</ul> 
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
