@@ -34,7 +34,6 @@
 	"type": "module",
 	"dependencies": {
 		"@emotion/css": "^11.11.2",
-		"radash": "^11.0.0",
 		"theme-change": "^2.5.0"
 	}
 }

@@ -1,6 +1,5 @@
 <script lang="ts">
     import "../app.css";
-    import _ from "radash";
     import Header from "$components/header.svelte";
     import Footer from "$components/footer.svelte";
     import { page } from "$app/stores";
@@ -9,9 +8,7 @@
         title: "",
         description: "",
     };
-    $: title = _.trim(metadata.title)
-        ? `${metadata.title} - wxllow.dev`
-        : "wxllow.dev";
+    $: title = metadata.title ? `${metadata.title} - wxllow.dev` : "wxllow.dev";
     $: path = $page.url.pathname;
     $: website = process.env.PUBLIC_URL || "https://wxllow.dev";
 </script>
