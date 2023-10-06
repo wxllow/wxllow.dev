@@ -3,6 +3,8 @@
     import Header from "$components/header.svelte";
     import Footer from "$components/footer.svelte";
     import { page } from "$app/stores";
+    import { onMount } from "svelte";
+    import { theme } from '$lib/stores'
 
     $: metadata = $page.data.metadata || {
         title: "",
@@ -10,7 +12,12 @@
     };
     $: title = metadata.title ? `${metadata.title} - wxllow.dev` : "wxllow.dev";
     $: path = $page.url.pathname;
-    $: website = process.env.PUBLIC_URL || "https://wxllow.dev";
+    $: website = "https://wxllow.dev";
+
+    onMount(() => {
+        theme.set(localStorage.getItem("theme") === 'light' ? 'light' : "dark");
+    })
+    let lightMode = false;
 </script>
 
 <svelte:head>
@@ -41,12 +48,12 @@
     <meta name="theme-color" content="#F4B7C1" />
 </svelte:head>
 
-<div>
+<div data-theme={`${$theme}`}>
     <header>
         <Header />
     </header>
 
-    <main>
+    <main class="mt-4 mb-8 relative">
         <slot />
     </main>
 
