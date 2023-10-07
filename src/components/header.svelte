@@ -22,12 +22,7 @@
         },
     ];
 
-    let navbarOpen = false;
-
-    function toggleNavbar() {
-        console.log("Hi!");
-        navbarOpen = !navbarOpen;
-    }
+    let navbarOpen = false; 
 
     function toggleTheme() {
         const value = `${$theme}` === "dark" ? "light" : "dark";
@@ -43,10 +38,7 @@
             <button
                 color="ghost"
                 tabIndex={0}
-                class={`md:hidden btn ${
-                    navbarOpen ? "btn-primary" : "btn-ghost"
-                }`}
-                on:click={toggleNavbar}
+                class="md:hidden btn btn-ghost"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +55,22 @@
                     />
                 </svg>
             </button>
+            <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+            <ul tabindex="0" class={`menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ${''}`}>
+                {#each links as link}
+                    <li>
+                        <a
+                        class="text-lg"
+                            href={link.href}
+                            target={link.target}
+                        >
+                            {link.name}
+                        </a>
+                    </li>
+                {/each}
+              </ul>
         </div>
+        
         <a href="/" class="btn btn-ghost normal-case text-xl rounded-lg"
             >wxllow.dev</a
         >
