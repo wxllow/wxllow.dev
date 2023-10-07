@@ -4,7 +4,7 @@
     import Footer from "$components/footer.svelte";
     import { page } from "$app/stores";
     import { onMount } from "svelte";
-    import { theme } from '$lib/stores'
+    import { theme } from "$lib/stores";
 
     $: metadata = $page.data.metadata || {
         title: "",
@@ -15,8 +15,8 @@
     $: website = "https://wxllow.dev";
 
     onMount(() => {
-        theme.set(localStorage.getItem("theme") === 'light' ? 'light' : "dark");
-    })
+        theme.set(localStorage.getItem("theme") === "light" ? "light" : "dark");
+    });
 </script>
 
 <svelte:head>

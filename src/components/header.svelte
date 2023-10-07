@@ -1,6 +1,6 @@
 <script>
     import { page } from "$app/stores";
-    import { theme } from '$lib/stores'
+    import { theme } from "$lib/stores";
 
     const links = [
         {
@@ -22,26 +22,20 @@
         },
     ];
 
-    let navbarOpen = false; 
+    let navbarOpen = false;
 
     function toggleTheme() {
         const value = `${$theme}` === "dark" ? "light" : "dark";
 
         localStorage.setItem("theme", value);
-        theme.set(value); 
+        theme.set(value);
     }
-
-    
 </script>
 
 <nav class="navbar sticky top-0 z-50">
     <div class="navbar-start">
         <div class="dropdown">
-            <button
-                color="ghost"
-                tabIndex={0}
-                class="md:hidden btn btn-ghost"
-            >
+            <button color="ghost" tabIndex={0} class="md:hidden btn btn-ghost">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5"
@@ -58,11 +52,14 @@
                 </svg>
             </button>
             <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-            <ul tabindex="0" class={`menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ${''}`}>
+            <ul
+                tabindex="0"
+                class={`menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ${""}`}
+            >
                 {#each links as link}
                     <li>
                         <a
-                        class="text-lg"
+                            class="text-lg"
                             href={link.href}
                             target={link.target}
                         >
@@ -70,10 +67,16 @@
                         </a>
                     </li>
                 {/each}
-              </ul>
+            </ul>
         </div>
-        <a href="/" class="btn btn-ghost normal-case text-xl rounded-lg"
-            >        <img class={`mr-1 ${$theme === 'dark' ? 'invert' : ''}`} src="/cat.svg" alt="wxllow.dev" width="32" height="32" />
+        <a href="/" class="btn btn-ghost normal-case text-xl rounded-lg">
+            <img
+                class={`mr-1 ${$theme === "dark" ? "" : "invert"}`}
+                src="/cat.svg"
+                alt="wxllow.dev"
+                width="32"
+                height="32"
+            />
             wxllow.dev</a
         >
     </div>
