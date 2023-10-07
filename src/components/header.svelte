@@ -30,6 +30,8 @@
         localStorage.setItem("theme", value);
         theme.set(value); 
     }
+
+    
 </script>
 
 <nav class="navbar sticky top-0 z-50">
@@ -70,9 +72,9 @@
                 {/each}
               </ul>
         </div>
-        
         <a href="/" class="btn btn-ghost normal-case text-xl rounded-lg"
-            >wxllow.dev</a
+            >        <img class={`mr-1 ${$theme === 'dark' ? 'invert' : ''}`} src="/cat.svg" alt="wxllow.dev" width="32" height="32" />
+            wxllow.dev</a
         >
     </div>
     <!-- <div class="navbar-center hidden lg:flex">
