@@ -10,14 +10,13 @@
         title: "",
         description: "",
     };
-    $: title = metadata.title ? `${metadata.title} - wxllow.dev` : "wxllow.dev";
+    $: title = metadata.title ? `${metadata.title}` : "wxllow.dev";
     $: path = $page.url.pathname;
     $: website = "https://wxllow.dev";
 
     onMount(() => {
         theme.set(localStorage.getItem("theme") === 'light' ? 'light' : "dark");
     })
-    let lightMode = false;
 </script>
 
 <svelte:head>

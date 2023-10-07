@@ -2,6 +2,7 @@
     import Uses from "./uses.component.svelte";
     import { theme } from '$lib/stores'
 
+	export let data;
 </script>
 
 <div class="mx-4 my-2 space-y-8 md:container">
@@ -17,8 +18,9 @@
             with other languages.
         </p>
         <div class={`${$theme}` !== 'light' ? 'hidden' : ''}>
-        <p class="my-2 text-3xl text-red-600">
-            I also am an avid hater of light mode users...
+        <p class="my-14 text-3xl text-red-600">
+            I̸̲͕̙̙͍̐̍̓̓́ͅ ̶̣̱̭̙̘̄̔̍̎ą̶͔͍̓l̴̡̻̖̬̽s̵̩̮͍̣͔͇̀̑̎ō̴̬̯̬͚̞̗̝̊̀̒̎̋̓͘͝ ̷͔̬͍̬̟́͛̆̓͑͋͋̾͝ã̴̢̨̞̺̖͈̞̐́̈̍̿̏̉ṃ̸̱̳̳̟̥͛ ̵͎̘̤̜̅͊̊̌̄̊͐ȧ̸͉̩̫̲̔͗͑͌̎͠ṅ̸̞ ̷̟̱͂̓͘͝͠a̸̢̛̱̼̘̳̰̲̯͛̐̂̑̕͝v̶̭̹̘̀̆͋̕͠i̸̢̯͇͚̦̠̠̹͂̕d̵̤̠̥̹̙͖͎͒̍̍̎̑͌͘͝ ̶̧̤͔́̾̂͑͊̂h̷̯͈̫͍͈̝͐̈́̋͒̄̂͂̌a̴̳͚̎͗͋t̸̙͍͈̋͑̃͗̊ȩ̵̺̙͙̩͈̀̎̌͆̈́̀̉r̵̹̭̟̹̮̲̩̈́́͒̇͋̀̍̋ ̴͇͈̄̑̀̓ȍ̷͇̱͑̇̒ḟ̷̜̤̖̠̮̜̣̰͔̇́̂͑̾̔̀͠ ̵̻͚̮̣̱̪͙̇̔̔̑̃̾̕͝l̴͙̲͓̹͋̓̈́̏̐̿́͘i̶͍͈͋͗͂̽̋͗̂g̸̪̐̍̒̎̔̕͝͝h̷͚͓̞͈͚̼̭̀͊̀̈́̚t̶͔͎̠̥̯̔́͗̐̉͋́͘ ̵̺̰̗̦͕̞̥̼͒̅̇̎̂͝m̵̢̦̬̠̣̮̿̐́̈́ͅỏ̴̦̻̻͈͕̪͕̹͌̑̀̀̕̚͠ḓ̴͎̞̆e̵̬͙̭͚͖̣̱̗̪̋̑ ̶̹͈̼͚̘͂̑̊ų̵̣̬̺̪̹̼̲̑̔̈̾̓̉͠͠s̷̨͇͎̬̝͔͔̣̲̓͊̂̾̿̋̕̕͘ę̴̻͙̖̎͋̏r̷̘̓̆͑́̅̄̚͝͝ś̶̩̖͝͠.̷̺̬͈͕͂̎̌̾̎͆̇͝.̸̢̝̪͆̐͌͂͑̇̾̌.̷͇̣̝͚̣͙̉̅̑̊̈́͛͝
+
         </p>
         <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Trollface_non-free.png/220px-Trollface_non-free.png" alt="You've been epicly trolled"/>
         </div>
@@ -41,7 +43,19 @@
     </div>
     <div id="blog">
         <h2 class="text-4xl font-bold my-4">Blog</h2>
-        <p class="text-xl">Coming soon! :)</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {#each data.posts as post}
+        <a href={`/blog/${post.slug}`}>
+        <div class="card bg-neutral shadow-xl hover:brightness-90">
+            <div class="card-body">
+                <h2 class="card-title">{post.title}</h2>
+                <p>{post.excerpt}</p>
+            </div>
+        </div>
+        </a>
+
+        {/each}
+        </div>
     </div>
     <div id="use">
         <Uses />
