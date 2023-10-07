@@ -1,5 +1,7 @@
 <script>
     import Uses from "./uses.component.svelte";
+    import { theme } from '$lib/stores'
+
 </script>
 
 <div class="mx-4 my-2 space-y-8 md:container">
@@ -14,6 +16,12 @@
             I code mostly in TypeScript, Go, & Python, but I am also familiar
             with other languages.
         </p>
+        <div class={`${$theme}` !== 'light' ? 'hidden' : ''}>
+        <p class="my-2 text-3xl text-red-600">
+            I also am an avid hater of light mode users...
+        </p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Trollface_non-free.png/220px-Trollface_non-free.png" alt="You've been epicly trolled"/>
+        </div>
     </div>
     <div class="alert alert-warning">
         <svg
