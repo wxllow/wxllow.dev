@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { dateFormatter } from "$lib/utils";
+    import { formatPostDate } from "$lib/utils";
 
     export let data;
 </script>
@@ -9,7 +9,7 @@
         <h1 class="text-5xl font-bold my-4">{data.meta.title}</h1>
         <p>
             {data.meta.updated ? "Updated" : "Published"}
-            {dateFormatter.format(new Date(data.meta.date))}
+            {formatPostDate(data.meta.date)}
         </p>
     </hgroup>
 

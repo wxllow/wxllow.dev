@@ -157,9 +157,8 @@
             class="link-accent"
             href="https://www.vultr.com/?ref=9070089-8H"
             target="_blank">Vultr</a
-        >
-        . Using my referral link, you can get $100 in credits for 14 days to try
-        out Vultr.
+        >. Using my referral link, you can get $100 in credits for 14 days to
+        try out Vultr.
     </li>
     <li>
         <span class="font-bold">Payment Processing</span>:
