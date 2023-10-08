@@ -48,11 +48,11 @@
 </svelte:head>
 
 <div data-theme={`${$theme}`}>
-    <header>
+    <header class="sticky top-0 z-50">
         <Header />
     </header>
 
-    <main class="mt-4 mb-8 relative">
+    <main class="mb-8 relative">
         <slot />
     </main>
 

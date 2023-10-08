@@ -32,7 +32,7 @@
     }
 </script>
 
-<nav class="navbar fixed top-0 w-full z-50 bg-base-100">
+<nav class="navbar z-50 bg-base-100">
     <div class="navbar-start">
         <div class="dropdown">
             <button color="ghost" tabIndex={0} class="md:hidden btn btn-ghost">
@@ -133,4 +133,3 @@
         </label>
     </div>
 </nav>
-<div class="mb-20" />

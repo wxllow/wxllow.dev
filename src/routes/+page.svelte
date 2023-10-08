@@ -14,8 +14,8 @@
         </p>
         <p class="my-2">I am a programmer and tech enthusiast.</p>
         <p class="my-2">
-            I code mostly in TypeScript, Go, & Python, but I am also familiar
-            with other languages.
+            I code mostly in Go and TypeScript but I am also familiar with other
+            languages like Rust and Python.
         </p>
         <div class={`${$theme}` !== "light" ? "hidden" : ""}>
             <p class="my-14 text-3xl text-red-600">
