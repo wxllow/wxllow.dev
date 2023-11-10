@@ -1,5 +1,5 @@
-import { writable } from 'svelte/store'
+import { writable } from "svelte/store";
 
-const theme = writable('dark')
+const theme = writable("dark");
 
-export { theme }
+export { theme };
