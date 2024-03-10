@@ -4,11 +4,11 @@
     You may
     <a
         class="link-accent"
-        href="https://git.wxllow.dev/wxllow/dotfiles"
-        target="_blank">view my dotfiles here</a
+        href="https://github.com/wxllow/dotfiles"
+        target="_blank">view my dotfiles here (they are messy tho)</a
     >.
 </p>
-<ul class="list-disc space-y-2 mb-4">
+<ul class="list-disc space-y-2 mb-4 lg:w-3/4">
     <li>
         <span class="font-bold">Operating System</span>: I primarily use
         <a class="link-accent" href="https://archlinux.org/" target="_blank"
@@ -27,13 +27,7 @@
         <span class="font-bold">Window Manager</span>: I use
         <a class="link-accent" href="https://hyprland.org/" target="_blank"
             >Hyprland</a
-        >, a beautiful, easily customizable Wayland window manager. You can find
-        my configuration
-        <a
-            class="link-accent"
-            href="https://git.wxllow.dev/wxllow/dotfiles"
-            target="_blank">here</a
-        >.
+        >, a beautiful, easily customizable Wayland window manager.
     </li>
     <li>
         <span class="font-bold">Terminal</span>:
@@ -82,16 +76,11 @@
         <a class="link-accent" href="https://neovim.io/" target="_blank"
             >Neovim</a
         >
-        as my editors of choice. For neovim, I use a configuration based on
-        <a
-            class="link-accent"
-            href="https://github.com/nvim-lua/kickstart.nvim"
-            target="_blank">kickstart.nvim</a
-        >. On both editors, I use the
+        as my editors of choice. On both editors, I use the
         <a class="link-accent" href="https://codeium.com/" target="_blank"
             >Codeium</a
-        > AI code completion plugin, it is a free alternative to Github Copilot which
-        is only trained on permissive code
+        > AI code completion plugin, a free alternative to Github Copilot which is
+        only trained on permissive code
     </li>
     <li>
         <span class="font-bold">File Manager</span>: Dolphin
@@ -122,9 +111,9 @@
         <a class="link-accent" href="https://kit.svelte.dev/" target="_blank"
             >SvelteKit</a
         >
-        (what this site uses). For static sites, I recommend
+        (what this site uses). For static sites,
         <a class="link-accent" href="https://gohugo.io/" target="_blank">Hugo</a
-        >
+        > is also awesome!
     </li>
     <li>
         <span class="font-bold">Serverless Platform</span>:
@@ -159,11 +148,5 @@
             target="_blank">Vultr</a
         >. Using my referral link, you can get $100 in credits for 14 days to
         try out Vultr.
-    </li>
-    <li>
-        <span class="font-bold">Payment Processing</span>:
-        <a class="link-accent" href="https://stripe.com/" target="_blank"
-            >Stripe</a
-        >
     </li>
 </ul>
