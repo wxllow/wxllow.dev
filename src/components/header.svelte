@@ -12,6 +12,14 @@
             href: "/#blog",
         },
         {
+            name: "Portfolio",
+            href: "/#portfolio",
+        },
+        {
+            name: "Contact",
+            href: "/#contact",
+        },
+        {
             name: "What I Use",
             href: "/#use",
         },

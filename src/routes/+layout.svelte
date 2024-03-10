@@ -47,14 +47,15 @@
     <meta name="theme-color" content="#F4B7C1" />
 </svelte:head>
 
-<div data-theme={`${$theme}`}>
+<div data-theme={`${$theme}`} class="h-full w-full overflow-hidden contents">
     <header class="sticky top-0 z-50">
         <Header />
     </header>
 
-    <main class="mb-8 relative">
+    <main data-theme={`${$theme}`} class="mb-8 overflow-y-auto">
         <slot />
     </main>
-
-    <footer><Footer /></footer>
+    <footer>
+        <Footer />
+    </footer>
 </div>
