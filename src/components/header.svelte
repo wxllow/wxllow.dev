@@ -19,10 +19,10 @@
             name: "Contact",
             href: "/#contact",
         },
-        {
-            name: "What I Use",
-            href: "/#use",
-        },
+        // {
+        //     name: "What I Use",
+        //     href: "/#use",
+        // },
         {
             name: "GitHub",
             href: "https://github.com/wxllow",

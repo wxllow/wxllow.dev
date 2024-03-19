@@ -1,4 +1,5 @@
 <script>
+    import { theme } from "$lib/stores";
     import Icon from "@iconify/svelte";
     import { onMount } from "svelte";
 
@@ -40,7 +41,7 @@
         lua: {
             name: "Lua",
             icon: "devicon:lua",
-            color: "#000080",
+            color: "#007acc",
         },
         python: {
             name: "Python",
@@ -57,6 +58,26 @@
             icon: "material-symbols:download",
             color: "#fcd53f",
         },
+        react: {
+            name: "React",
+            icon: "devicon:react",
+            color: "#61dafb",
+        },
+    };
+
+    const categories = {
+        web: {
+            name: "Web",
+            icon: "mdi:web",
+        },
+        desktop: {
+            name: "Desktop App",
+            icon: "ic:round-install-desktop",
+        },
+        other: {
+            name: "Other",
+            icon: "fluent-mdl2:unknown-solid",
+        },
     };
 
     const portfolio = [
@@ -67,6 +88,15 @@
             link: "https://docs.cleftly.com/",
             src: "https://github.com/wxllow/cleftly",
             langs: ["rust", "svelte", "typescript"],
+            category: "desktop",
+        },
+        {
+            name: "GGRetroBox",
+            description:
+                "The Gaming Subscription Box Tailored to You!\n\nI work on the frontend and backend :)",
+            link: "https://ggretrobox.com",
+            langs: ["nextjs", "react", "typescript"],
+            category: "web",
         },
         {
             name: "Chipate",
@@ -74,6 +104,7 @@
             link: "https://github.com/wxllow/chipate",
             src: "https://github.com/wxllow/chipate",
             langs: ["rust"],
+            category: "desktop",
         },
         {
             name: "Svelte DaisyUI Toast",
@@ -81,13 +112,23 @@
             link: "https://svelte-daisy-toast.wxllow.dev/",
             src: "https://github.com/wxllow/svelte-daisy-toast",
             langs: ["svelte", "typescript", "daisyui"],
+            category: "other",
         },
         {
-            name: "GGRetroBox",
-            description:
-                "The Gaming Subscription Box Tailored to You!\n\nI work on the frontend and backend :)",
-            link: "https://ggretrobox.com",
-            langs: ["nextjs", "typescript"],
+            name: "Twillow",
+            description: "Modular SMS bot using the Twilio API",
+            link: "https://github.com/wxllow/twillow",
+            src: "https://github.com/wxllow/twillow",
+            langs: ["python", "lua"],
+            category: "other",
+        },
+        {
+            name: "wxllow.dev (WIP)",
+            description: "This website",
+            link: "https://wxllow.dev",
+            src: "https://github.com/wxllow/wxllow.dev",
+            langs: ["sveltekit", "typescript", "tailwindcss", "daisyui"],
+            category: "web",
         },
         {
             name: "AppleMusicRP (Discontinued)",
@@ -96,35 +137,56 @@
             link: "https://github.com/wxllow/applemusicrp",
             src: "https://github.com/wxllow/applemusicrp",
             langs: ["downloads43k", "stars61", "python"],
-        },
-        {
-            name: "Twillow",
-            description: "Modular SMS bot using the Twilio API",
-            link: "https://github.com/wxllow/twillow",
-            src: "https://github.com/wxllow/twillow",
-            langs: ["python", "lua"],
-        },
-        {
-            name: "wxllow.dev (WIP)",
-            description: "This website",
-            link: "https://wxllow.dev",
-            src: "https://github.com/wxllow/wxllow.dev",
-            langs: ["sveltekit", "typescript", "tailwindcssa", "daisyui"],
+            category: "desktop",
         },
     ];
 
-    let visibleProjects = portfolio;
+    let filter = ["web", "desktop"];
+    let filteredPortfolio = portfolio;
+
     let expanded = true;
+    let visibleProjects = portfolio;
 
     onMount(() => {
         expanded = false;
     });
 
+    $: filteredPortfolio =
+        filter.length > 0
+            ? portfolio.filter((project) => {
+                  return filter.some(
+                      (category) => project.category === category,
+                  );
+              })
+            : portfolio;
+
     $: expanded,
-        (visibleProjects = expanded ? portfolio : portfolio.slice(0, 3));
+        (visibleProjects = expanded
+            ? filteredPortfolio
+            : filteredPortfolio.slice(0, 6));
 </script>
 
 <h2 class="text-4xl font-bold my-4">Portfolio</h2>
+
+<div class="flex flex-wrap gap-2 mb-4">
+    {#each Object.entries(categories) as [catk, category]}
+        <button
+            class="badge badge-lg gap-2 {filter.includes(catk)
+                ? 'badge-accent'
+                : `badge-neutral ${$theme === 'dark' ? 'text-white' : 'text-black'}`} hover:cursor-pointer hover:brightness-75"
+            on:click={() => {
+                if (filter.includes(catk)) {
+                    filter = filter.filter((f) => f !== catk);
+                } else {
+                    filter = [...filter, catk];
+                }
+            }}
+        >
+            <Icon icon={category.icon} />
+            {category.name}
+        </button>
+    {/each}
+</div>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {#each visibleProjects as project}
@@ -139,7 +201,7 @@
                                 <div
                                     class="badge badge-lg gap-2"
                                     style={langs[lang].color
-                                        ? `${langs[lang].color}`
+                                        ? `color: ${langs[lang].color};`
                                         : ""}
                                 >
                                     <Icon icon={langs[lang].icon} />
@@ -175,12 +237,14 @@
         </div>
     {/each}
 </div>
-<div class="text-center">
-    <button
-        on:click={() => (expanded = !expanded)}
-        class="btn {expanded
-            ? 'btn-neutral'
-            : 'btn-primary'} w-full lg:w-2/3 rounded-xl my-4"
-        >Show {expanded ? "Less" : "More"}</button
-    >
-</div>
+{#if filteredPortfolio.length > 6}
+    <div class="text-center">
+        <button
+            on:click={() => (expanded = !expanded)}
+            class="btn {expanded
+                ? 'btn-neutral'
+                : 'btn-primary'} w-full lg:w-2/3 rounded-xl my-4"
+            >Show {expanded ? "Less" : "More"}</button
+        >
+    </div>
+{/if}
